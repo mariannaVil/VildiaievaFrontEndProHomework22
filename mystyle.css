@@ -6,7 +6,7 @@ body {
 .container {
     text-align: center;
 }
-.parent-smile {
+#parent-smile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,10 @@ body {
     cursor: pointer;
     margin: 0 10px;
 }
-.count {
+#counts {
     display: flex;
     justify-content: center;
+}
+.count {
+    margin: 0 17px;
 }

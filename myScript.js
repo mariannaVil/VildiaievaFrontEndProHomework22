@@ -1,17 +1,9 @@
-let allSmiles = document.querySelectorAll('.all-smile');
-let count = document.querySelector('.count');
-let allCount = {};
-allSmiles.forEach(smile => {
-  smile.addEventListener('click', () => {
-    allCount[smile.id] = (allCount[smile.id] || 0) + 1;
-    updateCount();
-  });
+let parentContainer = document.getElementById('parent-smile');
+let countsContainer = document.getElementById('counts');
+parentContainer.addEventListener('click', function (event) {
+    if (event.target.classList.contains('smile')) {
+        let optionIndex = Array.from(parentContainer.children).indexOf(event.target);
+        let resultElement = countsContainer.children[optionIndex];
+        resultElement.textContent = parseInt(resultElement.textContent) + 1;
+    }
 });
-function updateCount() {
-  count.innerHTML = '';
-  for (let smileId in allCount) {
-    let countElement = document.createElement('div');
-    countElement.textContent = allCount[smileId];
-    count.appendChild(countElement);
-  }
-}
