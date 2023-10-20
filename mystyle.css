@@ -1,0 +1,25 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+.container {
+    text-align: center;
+}
+#parent-smile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.smile {
+    cursor: pointer;
+    margin: 0 10px;
+}
+#counts {
+    display: flex;
+    justify-content: center;
+}
+.count {
+    margin: 0 17px;
+}
